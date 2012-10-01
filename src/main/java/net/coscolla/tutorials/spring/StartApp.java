@@ -7,9 +7,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class StartApp {
 
-	@Autowired
 	private IUserDao dao;
 	
+	public IUserDao getDao() {
+		return dao;
+	}
+
+	public void setDao(IUserDao dao) {
+		this.dao = dao;
+	}
+
 	public void main()
 	{
 		User user = dao.getById(1);

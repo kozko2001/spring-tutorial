@@ -17,4 +17,11 @@
     <bean class="net.coscolla.tutorials.spring.StartApp" >
         <property name="dao" ref="dao"></property>
     </bean>
+    
+    
+	<bean id="jsonViewResolver" class="org.springframework.web.servlet.view.XmlViewResolver">
+		<property name="location" value="/WEB-INF/views.xml"/>
+		<property name="order" value="1"/>
+	</bean>
+    
 </beans>
